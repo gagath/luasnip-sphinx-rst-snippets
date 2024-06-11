@@ -16,26 +16,37 @@ Install
 Lazy
 ----
 
-If you are using Lazy.nvim_, you can lazy-load the snippets only when the
-detected filetype is a reStructuredText document.
+If you are using Lazy.nvim_, you can lazy-load the snippets by calling
+the `luasnip.loaders.from_lua` loader.
 
 .. _Lazy.nvim: https://github.com/folke/lazy.nvim
 
 .. code:: lua
 
     {
-        "gagath/luasnip-sphinx-rst-snippets",
-        dependencies = { "L3MON4D3/LuaSnip" },
-        ft = "rst",
-        config = {},
-    },
+        'hrsh7th/nvim-cmp',
+        event = 'InsertEnter',
+        dependencies = {
+            -- ...
+            'L3MON4D3/LuaSnip', -- completion engine
+            'saadparwaiz1/cmp_luasnip', -- link between luasnip and nvim-cmp
+            'gagath/luasnip-sphinx-rst-snippets', -- This repository
+        },
+        config = function ()
+            local cmp = require('cmp')
+
+            require("luasnip.loaders.from_lua").lazy_load()
+
+            -- ...
+        end,
+    }
 
 Others
 ------
 
 .. code:: lua
 
-    require("luasnip-sphinx-rst-snippets").setup({})
+    require("luasnip.loaders.from_lua").lazy_load()
 
 References
 ==========
