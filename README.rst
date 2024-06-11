@@ -13,8 +13,13 @@ emphasis on on writing Sphinx documentation.
 Install
 =======
 
-Lazy.nvim
----------
+Lazy
+----
+
+If you are using Lazy.nvim_, you can lazy-load the snippets only when the
+detected filetype is a reStructuredText document.
+
+.. _Lazy.nvim: https://github.com/folke/lazy.nvim
 
 .. code:: lua
 
