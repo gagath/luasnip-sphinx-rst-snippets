@@ -5,7 +5,6 @@
 local M = {}
 
 function M.setup()
-	print("loading")
 	require("luasnip.loaders.from_lua").load({paths = "snippets"})
 end
 
