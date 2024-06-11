@@ -17,7 +17,7 @@ Lazy
 ----
 
 If you are using Lazy.nvim_, you can lazy-load the snippets by calling
-the `luasnip.loaders.from_lua` loader.
+the ``luasnip.loaders.from_lua`` loader.
 
 .. _Lazy.nvim: https://github.com/folke/lazy.nvim
 
