@@ -10,6 +10,28 @@ emphasis on on writing Sphinx documentation.
 
 .. _LuaSnip: https://github.com/L3MON4D3/LuaSnip
 
+Install
+=======
+
+Lazy.nvim
+---------
+
+.. code:: lua
+
+    {
+        "gagath/luasnip-sphinx-rst-snippets",
+        dependencies = { "L3MON4D3/LuaSnip" },
+        ft = "rst",
+        config = {},
+    },
+
+Others
+------
+
+.. code:: lua
+
+    require("luasnip-sphinx-rst-snippets").setup({})
+
 References
 ==========
 
